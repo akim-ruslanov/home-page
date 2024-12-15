@@ -1,0 +1,166 @@
+body {
+    margin: 0;
+    background: rgb(65,143, 174);
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    /* font-weight: <weight>; */
+    font-style: normal;
+  
+}
+
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    min-height: 400px;
+    padding: 100px 20vw;
+}
+
+img {
+    width: 100%;
+}
+
+svg {
+    height: 100%;
+}
+
+
+
+.profile-info-wrapper {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    /* align-self: stretch; */
+    /* align-self: center; */
+    /* flex-direction: row; */
+}
+
+.profile-picture {
+    width: 100%;
+    max-width: 400px;
+    flex-grow: 1;
+}
+
+.about-me-card {
+    flex-grow: 3;
+    background-color: #FFFFFF;
+    box-shadow: 10px 10px 10px 0px #dddddd;
+    padding: 20px;
+}
+
+.about-me-card > h1 {
+    font-weight: 500;
+    font-size: 32px;
+}
+
+.about-me-card > p {
+    line-height: 1.6;
+}
+
+.about-me-links {
+    display: flex;
+    justify-content: end;
+    gap: 10px
+}
+
+.about-me-links > a {
+    min-width: 20px;
+}
+
+.about-me::after {
+    content: '';
+    transform: skewY(347deg); 
+    transform-origin: bottom right;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    background-color: #FFFFFF;
+    height: 60%; /* Need to make this responsive */
+    box-shadow: inset 0px 10px 10px 0px #dddddd;
+}
+
+
+/* My Work Section */
+
+.my-work {
+    background-color: #FFFFFF;
+}
+
+.projects-wrapper {
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 30px; /* TODO: needs to be responsive */
+}
+
+.project-card {
+    display: grid;
+    grid-template-columns: 5fr repeat(2, 1fr);
+    grid-template-rows: 2fr 0.2fr 0.5fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: center;
+    box-shadow: #dddddd 1px 1px 15px,
+    #dddddd -1px 0px 15px;
+}
+
+.project-image {
+    width: 100%;
+    grid-area: 1 / 1 / 2 / 4;
+}
+
+.project-name {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.project-github {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.project-link { grid-area: 2 / 3 / 3 / 4; }
+
+.project-description {
+    grid-area: 3 / 1 / 4 / 4;
+    align-self: start;
+}
+
+.project-name, .project-description {
+    padding-left: 10px;
+}
+
+.project-card svg {
+    width: 20px;
+}
+
+.project-github, .project-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-picture-alternate {
+    width: 100px;
+}
+
+/* Contact Me */
+.contact-me-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 50%));    
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    color: #FFFFFF;
+}
+
+.phone-number svg, .email svg {
+    width: 18px;
+}
+
+.contact-me-links svg {
+    width: 30px;
+}
