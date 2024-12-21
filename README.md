@@ -1,3 +1,3 @@
-# javascript-vanilla-template
+# Responsive Home Page
 
-Template repository to create JS Vanilla projects with webpack, eslint and prettier
+Created as part of the Odin project practice

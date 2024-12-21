@@ -15,7 +15,7 @@ section {
     align-items: center;
     justify-items: center;
     min-height: 400px;
-    padding: 100px 20vw;
+    padding: 50px 10vw;
 }
 
 img {
@@ -38,9 +38,24 @@ svg {
 }
 
 .profile-picture {
+    min-width: 200px;
     width: 100%;
     max-width: 400px;
+    min-width: 100px;
     flex-grow: 1;
+    position: relative;
+    text-align: center;
+
+}
+
+.profile-picture .name-container {
+    width: 100%;
+    color: #FFFFFF;
+    margin: 0;
+    position: absolute;
+    bottom: 0.4rem;
+    text-align: center;
+    font-size: 30px;
 }
 
 .about-me-card {
@@ -80,6 +95,32 @@ svg {
     background-color: #FFFFFF;
     height: 60%; /* Need to make this responsive */
     box-shadow: inset 0px 10px 10px 0px #dddddd;
+}
+
+@media (max-width: 992px) and (min-width: 600px) {
+    .profile-info-wrapper {
+        display: block;
+    }
+
+    .profile-picture {
+        position: relative;
+        float: left;
+        z-index:2;
+        align-self: flex-start;
+    }
+
+    .about-me-card {
+        position: relative;
+        margin-top: 60%;
+        margin-left: 5%;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .profile-info-wrapper {
+        flex-direction: column;
+    }
+
 }
 
 
@@ -142,7 +183,7 @@ svg {
 }
 
 .profile-picture-alternate {
-    width: 100px;
+    width: 100%;
 }
 
 /* Contact Me */
